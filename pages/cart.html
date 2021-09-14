@@ -12,6 +12,8 @@
     <!-- fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
+    <!-- scriptJs -->
+    <script src="../scripts/script.js" async></script>
 </head>
 
 <body>
@@ -57,68 +59,70 @@
                     <h1>Subtotal</h1>
                 </th>
             </tr>
-            <tr>
+            <tr class="cart-row">
                 <td>
                     <div class="cart-info">
                         <img src="../img/cart1.jpg" alt="">
                         <div>
                             <h3>Boy’s T-Shirt</h3>
-                            <span>Price: $50.00</span>
+                            <span class="ietm-price">$50.60</span>
                             <br />
                             <a href="#" class="btn-remove">Remove</a>
                         </div>
                     </div>
                 </td>
-                <td><input type="number" min="1" max="1000" value="2"></td>
+                <td><input class="cart-quantity" type="number" min="1" max="1000" value="2"></td>
                 <td>$50.00</td>
             </tr>
-            <tr>
+            <tr class="cart-row">
                 <td>
                     <div class="cart-info">
                         <img src="../img/cart2.jpg" alt="">
                         <div>
                             <h3>Boy’s T-Shirt</h3>
-                            <span>Price: $50.00</span>
+                            <span class="ietm-price">$50.70</span>
                             <br />
                             <a href="#" class="btn-remove">Remove</a>
                         </div>
                     </div>
                 </td>
-                <td><input type="number" min="1" max="1000" value="1"></td>
+                <td><input class="cart-quantity" type="number" min="1" max="1000" value="1"></td>
                 <td>$50.00</td>
             </tr>
-            <tr>
+            <tr class="cart-row">
                 <td>
                     <div class="cart-info">
                         <img src="../img/cart1.jpg" alt="">
                         <div>
                             <h3>Boy’s T-Shirt</h3>
-                            <span>Price: $50.00</span>
+                            <span class="ietm-price">$50.90</span>
                             <br />
                             <a href="#" class="btn-remove">Remove</a>
                         </div>
                     </div>
                 </td>
-                <td><input type="number" min="1" max="1000" value="1"></td>
+                <td><input class="cart-quantity" type="number" min="1" max="1000" value="1"></td>
                 <td>$50.00</td>
             </tr>
-            <tr>
+            <tr class="cart-row">
                 <td>
                     <div class="cart-info">
                         <img src="../img/cart2.jpg" alt="">
                         <div>
                             <h3>Boy’s T-Shirt</h3>
-                            <span>Price: $50.00</span>
+                            <span class="ietm-price">$50.09</span>
                             <br />
                             <a href="#" class="btn-remove">Remove</a>
                         </div>
                     </div>
                 </td>
-                <td><input type="number" min="1" max="1000" value="1"></td>
+                <td><input class="cart-quantity" type="number" min="1" max="1000" value="1"></td>
                 <td>$50.00</td>
             </tr>
 
         </table>
+
+
 
         <div class="total-price">
             <table>
@@ -126,7 +130,7 @@
                     <td>
                         <h2>Subtotal</h2>
                     </td>
-                    <td>$200</td>
+                    <td class="sub-total">$200</td>
                 </tr>
                 <tr>
                     <td>
@@ -136,7 +140,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h1>Total</h1>></td>
+                        <h1 class="cart-total">Total</h1>></td>
                     <td>$250</td>
                 </tr>
             </table>
@@ -201,8 +205,7 @@
     </section>
 
 
-    <!-- scriptJs -->
-    <script src="../scripts/script.js"></script>
+
 </body>
 
 </html>
