@@ -12,6 +12,7 @@ function ready() {
     let cart = document.querySelector('#shoping-cart');
     let removeItemButton = document.getElementsByClassName('btn-remove');
     let quantityInputs = document.getElementsByClassName('cart-quantity');
+    var addToCartButtons = document.getElementsByClassName('add-btn');
 
     menu.addEventListener('click', () => {
         menu.classList.toggle('fa-times');
@@ -41,7 +42,57 @@ function ready() {
         button.addEventListener('change', quantityChanged)
     }
 
+    for (var i = 0; i < addToCartButtons.length; i++) {
+        var button = addToCartButtons[i];
+        button.addEventListener('click', addItemClicked)
+    }
+
 }
+
+//add item to cart clicked
+
+function addItemClicked(event) {
+    var button = event.target
+    var shopItem = button.parentElement
+    var title = shopItem.getElementsByClassName('title')[0].innerHTML
+    var price = shopItem.getElementsByClassName('price')[0].innerHTML
+    var imgSrc = shopItem.getElementsByClassName('item-img')[0].src
+
+    // console.log(price, imgSrc)
+    addItemToCart(price, title, imgSrc)
+
+}
+
+//add item to cart row
+function addItemToCart(price, title, imgSrc) {
+    var cartRow = document.createElement('tr')
+    cartRow.classList.add('cart')
+        // cartRow.innerHTML = title
+    var cartItems = document.getElementsByClassName('cart-row')[0];
+    console.log(cartItems)
+        // cartItems.appendChild(cartRow)
+    var cartContent = `<tr class="cart-row">
+                        <td>
+                            <div class="cart-info">
+                                <img src="${imgSrc}" alt="">
+                                <div>
+                                    <h3>${title}</h3>
+                                    <span class="ietm-price">${price}</span>
+                                    <br />
+                                    <a href="#" class="btn-remove">Remove</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input class="cart-quantity" type="number" min="1" max="1000" value="2"></td>
+                        <td>$50.00</td>
+                    </tr>`
+    cartRow.innerHTML = cartContent
+    cartItems.append(cart)
+
+}
+
+
+
 //quantity change 
 function quantityChanged(event) {
     var input = event.target

@@ -176,6 +176,18 @@ section {
     border-radius: 5rem;
 }
 
+.add-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--red);
+    color: #fff;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5rem;
+}
+
 .btn-remove {
     display: inline-block;
     margin-top: 1rem;
@@ -189,6 +201,10 @@ section {
 }
 
 .btn:hover {
+    background: var(--black);
+}
+
+.add-btn:hover {
     background: var(--black);
 }
 
