@@ -87,6 +87,7 @@ function addItemToCart(price, title, imgSrc) {
                         <td>$50.00</td>
                     </tr>`
     cartRow.innerHTML = cartContent
+    console.log("cart")
     cartItems.append(cart)
 
 }
